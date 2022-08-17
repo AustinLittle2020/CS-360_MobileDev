@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appBg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BCA8E1"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonEditData"
+        android:layout_width="88dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="277dp"
+        android:layout_marginEnd="72dp"
+        android:onClick="SayHello"
+        android:text="Edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonViewPermissions"
+        app:layout_constraintTop_toBottomOf="@+id/grid" />
+
+    <TextView
+        android:id="@+id/AppName"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="18dp"
+        android:text="Event Tracker"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gridHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonViewPermissions"
+        android:layout_width="88dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="277dp"
+        android:layout_marginEnd="90dp"
+        android:onClick="SayHello"
+        android:text="Add"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEditData"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid" />
+
+    <TableLayout
+        android:id="@+id/grid"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridHeader">
+
+        <TableRow
+            android:id="@+id/gOne"
+            android:layout_width="match_parent"
+            android:layout_height="33dp">
+
+            <Button
+                android:id="@+id/buttonEdit1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/gTwo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonEdit2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/gThree"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonEdit3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/gFour"
+            android:layout_width="match_parent"
+            android:layout_height="131dp">
+
+            <Button
+                android:id="@+id/buttonEdit4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                app:iconGravity="end" />
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/gridHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="false"
+        android:editable="false"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Events"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AppName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
